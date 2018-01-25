@@ -1,0 +1,59 @@
+.page-wrapper {
+  width: 100%;
+}
+
+.content-wrapper {
+  width: 70%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sidebar {
+  width: 20%;
+  max-width: 200px;
+  float: left;
+  border-left: 1px solid #c2d1d6;
+  padding-left: 5px;
+  height: 100%;
+}
+
+.sidebar h4, .sidebar h5, .sidebar h6 {
+  margin: 0px 0px 0px 5px;
+  padding: 0px;
+  font-size: 14px;
+}
+
+.sidebar h5 {
+  margin-left: 15px;
+}
+
+.sidebar h6 {
+  margin-left: 25px;
+  font-weight: normal;
+}
+
+.main-area {
+  width: 80%;
+  border: 1px solid red;
+  height: auto;
+  padding: 5px 20px 0px 20px;
+}
+
+.summary-header {
+  width: inherit;
+  border: 1px solid grey;
+  border-radius: 10px 10px 0px 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-color: #c2d1d6;
+  margin: 0px 0px 50px 0px;
+  padding: 10px 10px 10px 60px;
+  color: #FFF;
+  font-size: 40px;
+}
