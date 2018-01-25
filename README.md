@@ -8,3 +8,7 @@ Basic principles as follow:
 - By default only a summary of each entry will be shown, but you can click to expand and read the full entry
 - Any terms of interest in the entry will be linked to the main entry on that subject - clicking will display a custom div that is fixed in position (so will always open in the same place on screen) - this will contain a brief summary / description with the option to click and go to the full entry
 - Major connected items will have dedicated buttons to highlight their importance
+
+Plan to host on GitHub pages, so will only use static files (no PHP!) this means that search and filtering functions will be Javascript-based (or JQuery if necessary).
+
+There's a link to how to implement a search function here: https://stackoverflow.com/questions/14031369/how-to-implement-search-function-using-javascript-or-jquery
