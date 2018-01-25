@@ -24,20 +24,32 @@
          <h6>Music</h6>
        </div>
        <div class="main-area">
-         <div class="summary-item">
-           <div class="summary-header">Aarti</div>
-           <div class="summary-body">Aarti also spelled arti, arati, arathi, aarthi is a Hindu religious ritual of worship, a part of puja, in which light from wicks soaked in ghee or camphor is offered to one or more deities. Aartis also refer to the songs sung in praise of the deity, when lamps are being offered.
-             <button class="open-full">FULL ARTICLE</button>
+         <div class="item">
+           <div class="item-header">Aarti</div>
+           <div class="item-body-summary">
+            <p>Aarti also spelled arti, arati, arathi, aarthi is a Hindu religious ritual of worship, a part of puja, in which light from wicks soaked in ghee or camphor is offered to one or more deities. Aartis also refer to the songs sung in praise of the deity, when lamps are being offered.</p>
+           <div class="item-body-full" id="aarti">
+            <p>Aarti is derived from the Sanskrit word ārātrika (आरात्रिक), which means something that removes rātrī, darkness (or light waved in darkness before an icon).[1][2][3] Another word from which Aarti is thought to be derived is the Sanskrit word Aaraartikyam (Sanskrit: आरार्तिक्यं).[citation needed] A Marathi language reference says[4] it is also known as Mahaneeranjana (Sanskrit: महानीराञ्जना)[5]</p>
+            
+            <p>Aarti is said to have descended from the Vedic concept of fire rituals, or homa. In the traditional aarti ceremony, the flower represents the earth (solidity), the water and accompanying handkerchief correspond with the water element (liquidity), the ghee or oil lamp represents the fire component (heat), the peacock fan conveys the precious quality of air (movement), and the yak-tail fan represents the subtle form of ether (space). The incense represents a purified state of mind, and one’s "intelligence" is offered through the adherence to rules of timing and order of offerings. Thus, one’s entire existence and all facets of material creation are symbolically offered to the Lord via the aarti ceremony.[6] The word may also refer to the traditional Hindu devotional song that is sung during the ritual.</p>
+            </div>
+             <button class="open-full" onclick="toggle('aarti')">expand / collapse</button>
            </div>
-         </div>
-         <div class="full-item">
-           <div class="full-header">Aarti</div>
-           <div class="full-body">Aarti is derived from the Sanskrit word ārātrika (आरात्रिक), which means something that removes rātrī, darkness (or light waved in darkness before an icon).[1][2][3] Another word from which Aarti is thought to be derived is the Sanskrit word Aaraartikyam (Sanskrit: आरार्तिक्यं).[citation needed] A Marathi language reference says[4] it is also known as Mahaneeranjana (Sanskrit: महानीराञ्जना)[5]
-
-Aarti is said to have descended from the Vedic concept of fire rituals, or homa. In the traditional aarti ceremony, the flower represents the earth (solidity), the water and accompanying handkerchief correspond with the water element (liquidity), the ghee or oil lamp represents the fire component (heat), the peacock fan conveys the precious quality of air (movement), and the yak-tail fan represents the subtle form of ether (space). The incense represents a purified state of mind, and one’s "intelligence" is offered through the adherence to rules of timing and order of offerings. Thus, one’s entire existence and all facets of material creation are symbolically offered to the Lord via the aarti ceremony.[6] The word may also refer to the traditional Hindu devotional song that is sung during the ritual.</div>
          </div>
        </div>
      </div>
    </div>
  </body>
+
+<script>
+  function toggle(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'block') {
+      e.style.display = 'none';
+    }
+      else {
+        e.style.display = 'block';
+    }
+  }  
+</script>
 </html>
