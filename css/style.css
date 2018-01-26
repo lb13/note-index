@@ -119,3 +119,8 @@ header h1 {
   background-color: #000;
   color: #FFF;
 }
+
+.selector:hover {
+	cursor: pointer;
+	background-color: lightblue;
+}
