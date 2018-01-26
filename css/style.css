@@ -43,18 +43,19 @@
 
 .item-header {
   width: inherit;
-  border: 1px solid #D6C7C2;
+  border: 1px solid #000;
   border-radius: 10px 10px 0px 0px;
   margin: 0px;
   padding: 5px;
   font-size: 20px;
-  background-color: #D6C7C2;
+  background-color: #000;
+  color: #FFF;
 }
 
 .item-body-summary {
-  border-right: 1px solid #D6C7C2;
-  border-left: 1px solid #D6C7C2;
-  border-bottom: 1px solid #D6C7C2;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   margin: 0px;
   padding: 5px;
   font-size: 12px;
@@ -83,6 +84,10 @@
   border-radius: 25px;
 }
 
+.item {
+	margin-bottom: 20px;
+}
+
 p {
   margin: 0px;
 }
@@ -90,23 +95,27 @@ p {
 body {
   margin: 0px;
   padding: 0px;
-  font-size: 0px;
+  font-size: 1px;
   font-family: Arial;
 }
 
 header {
-  background-color: #289526;
+  background-color: black;
   margin: 0px 0px 50px 0px;
   padding: 10px 10px 10px 60px;
   color: #FFF;
-  font-size: 40px;
+  font-size: 40em;
   height: 100px;
+  font-family: Courier;
+}
+
+header h1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 2em;
 }
 
 .active {
-  background-color: red;
-}
-
-.ritual {
-  display: none;
+  background-color: #000;
+  color: #FFF;
 }

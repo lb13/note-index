@@ -7,20 +7,23 @@
  </head>
  <body>
    <div class="page-wrapper">
-     <header>Religious Studies Notes</header>
+     <header><h1>Note Index</h1></header>
      <div class="content-wrapper">
        <div class="sidebar">
          <h4>Search for...</h4>
          <input type="text">
-         <h4>Filter by...</h4>
+		 <h4>--------------------</h4>
+		 <h4 onclick="reset()">Clear filter</h4>
+		 <h4>--------------------</h4>
+		 <h4>Filter by...</h4>
          <h5>Places</h5>
          <h6>Pilgrimage</h6>
          <h6>Buildings</h6>
          <h6>Natural world</h6>
          <h5>Practices</h5>
          <h6>Self-negation</h6>
-         <h6 class="selector active" id="selector-ritual" onclick="select('ritual','selector-ritual')">Ritual</h6>
-         <h6 class="selector">Worship</h6>
+         <h6 class="selector" id="selector-ritual" onclick="select('ritual','selector-ritual')">Ritual</h6>
+         <h6 class="selector" id="selector-worship" onclick="select('worship', 'selector-worship')">Worship</h6>
          <h6 class="selector">Music</h6>
        </div>
        <div class="main-area">
@@ -36,6 +39,29 @@
              <button class="open-full" onclick="toggle('aarti')">expand / collapse</button>
            </div>
          </div>
+		 
+		 <div class="item ritual worship">
+        <div class="item-header">Eucharist</div>
+        <div class="item-body-summary">
+            <p>The eucharist is when Christians eat bread and drink wine in remembrance of Jesus.</p>
+            <div class="item-body-full" id="eucharist">
+                <p>Typically held on Sundays, found throughout Christian world, although interpretations differ.</p>
+            </div>
+            <button class="open-full" onclick="toggle('eucharist')">expand / collapse</button>
+        </div>
+    </div>
+		 
+		<div class="item worship">
+			<div class="item-header">Prayer</div>
+			<div class="item-body-summary">
+				<p>Prayer is found in multiple religious settings, and generally involves communication with a divinity.</p>
+				<div class="item-body-full" id="prayer">
+					<p>Prayers can be private or public, formal or informal.</p>
+				</div>
+				<button class="open-full" onclick="toggle('prayer')">expand / collapse</button>
+			</div>
+		</div>
+		 
        </div>
      </div>
    </div>
@@ -54,16 +80,41 @@
 
   function select(cl,id) {
     var e = document.getElementsByClassName(cl);
-    var a = document.getElementById(id);
-
-    alert('The class name is '+cl);
-    alert('The ID name is '+id);
-
-    document.getElementsByClassName(cl)[0].style.display = 'block';
+	var a = document.getElementsByClassName('item');
+	var c = document.getElementsByClassName('selector');
+	
+	// First, need to set all elements with class 'item' to hidden so that non-relevant results are ommitted
+	for (var z = 0; z < a.length; z++) {
+		a[z].style.display = 'none';
+	}
+	
+	// Loops through the instances of the class that is named cl, which will be the topic filtered for
+	// Sets those elements with a matching class to display
+	for (var i = 0; i < e.length; i++) {
+		e[i].style.display = 'block';
+	}
+	
+	// Sets all selectors to deactivated before moving on to activate the appropriate selector usng ID
+	for (var y = 0; y < c.length; y++) {
+		c[y].classList.remove('active');
+	}
+	
+	// Sets the topic to active, highlights it
+	document.getElementById(id).classList.add('active');
   }
 
-  function activate(id) {
-    document.getElementById(id).classList.add('active');
+  
+  function reset() {
+	var a = document.getElementsByClassName('item');
+	var c = document.getElementsByClassName('selector');
+	
+	for (var z = 0; z < a.length; z++) {
+		a[z].style.display = 'block';
+	}
+	
+	for (var y = 0; y < c.length; y++) {
+		c[y].classList.remove('active');
+	}
   }
 </script>
 </html>
