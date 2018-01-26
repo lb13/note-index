@@ -9,6 +9,7 @@ Well basically you should just be able to follow some really basic HTML principl
 
 Add new item:
 
+```html
     <div class="item">
         <div class="item-header">NAME OF ENTRY</div>
         <div class="item-body-summary">
@@ -19,6 +20,7 @@ Add new item:
             <button class="open-full" onclick="toggle('')">expand / collapse</button>
         </div>
     </div>
+```
 
 Basic principles as follow:
 - Main container will include search options in navbar on left of article
