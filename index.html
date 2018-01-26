@@ -19,12 +19,12 @@
          <h6>Natural world</h6>
          <h5>Practices</h5>
          <h6>Self-negation</h6>
-         <h6>Ritual</h6>
-         <h6>Worship</h6>
-         <h6>Music</h6>
+         <h6 class="selector active" id="selector-ritual" onclick="select('ritual','selector-ritual')">Ritual</h6>
+         <h6 class="selector">Worship</h6>
+         <h6 class="selector">Music</h6>
        </div>
        <div class="main-area">
-         <div class="item">
+         <div class="item ritual">
            <div class="item-header">Aarti</div>
            <div class="item-body-summary">
             <p>Aarti also spelled arti, arati, arathi, aarthi is a Hindu religious ritual of worship, a part of puja, in which light from wicks soaked in ghee or camphor is offered to one or more deities. Aartis also refer to the songs sung in praise of the deity, when lamps are being offered.</p>
@@ -51,5 +51,19 @@
         e.style.display = 'block';
     }
   }  
+
+  function select(cl,id) {
+    var e = document.getElementsByClassName(cl);
+    var a = document.getElementById(id);
+
+    alert('The class name is '+cl);
+    alert('The ID name is '+id);
+
+    document.getElementsByClassName(cl)[0].style.display = 'block';
+  }
+
+  function activate(id) {
+    document.getElementById(id).classList.add('active');
+  }
 </script>
 </html>
