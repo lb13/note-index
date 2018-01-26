@@ -1,5 +1,24 @@
-# religious-studies-notes
-A repository of notes on religious studies organised by theme, searchable, linked, comprehensive.
+# Note Index
+A repository of notes organised by theme. Searchable, linked, comprehensive.
+
+## Why?
+Because static files are handy if you're hosting on Github Pages, or even just running a HTML document from your local computer. It's not possible to use server-side programming in that scenario, so most CMS and wiki options are out the window. There are static HTML generators like Jekyll, but that doesn't really give you a simple out of the box solution unless you want to install Ruby and get your head around yet another piece of software. Not that Ruby isn't great, but I want to go one step simpler.
+
+## How?
+Well basically you should just be able to follow some really basic HTML principles and get good results. That's the idea, anyway.
+
+Add new item:
+
+    <div class="item">
+        <div class="item-header">NAME OF ENTRY</div>
+        <div class="item-body-summary">
+            <p>BRIEF SUMMARY HERE</p>
+            <div class="item-body-full" id="">
+                <p>FULL ENTRY GOES HERE</p>
+            </div>
+            <button class="open-full" onclick="toggle('')">expand / collapse</button>
+        </div>
+    </div>
 
 Basic principles as follow:
 - Main container will include search options in navbar on left of article
