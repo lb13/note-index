@@ -10,16 +10,16 @@ Well basically you should just be able to follow some really basic HTML principl
 Add new item:
 
 ```html
-    <div class="item">
-        <div class="item-header">NAME OF ENTRY</div>
-        <div class="item-body-summary">
-            <p>BRIEF SUMMARY HERE</p>
-            <div class="item-body-full" id="">
-                <p>FULL ENTRY GOES HERE</p>
-            </div>
-            <button class="open-full" onclick="toggle('')">expand / collapse</button>
-        </div>
-    </div>
+<div class="item" id="TITLE"> <!--ADD ADDITIONAL CLASS NAMES AS TAGS HERE -->
+  <div class="item-header">TITLE</div>
+  <div class="item-body-summary" id="TITLE-summary">
+    <p>SUMMARY CONTENT <span class="preview-link" onclick="preview('ID OF RELATED ITEM')">LINK TEXT</span></p>
+  </div>
+  <div class="item-body-full" id="TITLE-body">
+    <p>BODY CONTENT</p>
+  </div>
+  <button class="open-full" onclick="toggle('TITLE-body')">expand / collapse</button>
+</div>
 ```
 
 Basic principles as follow:
@@ -30,6 +30,4 @@ Basic principles as follow:
 - Any terms of interest in the entry will be linked to the main entry on that subject - clicking will display a custom div that is fixed in position (so will always open in the same place on screen) - this will contain a brief summary / description with the option to click and go to the full entry
 - Major connected items will have dedicated buttons to highlight their importance
 
-Plan to host on GitHub pages, so will only use static files (no PHP!) this means that search and filtering functions will be Javascript-based (or JQuery if necessary).
-
-There's a link to how to implement a search function here: https://stackoverflow.com/questions/14031369/how-to-implement-search-function-using-javascript-or-jquery
+Plan to host on GitHub pages, so will only use static files (no PHP!) this means that search and filtering functions will be Javascript-based.
