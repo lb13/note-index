@@ -14,7 +14,7 @@
          <h4>Search for...</h4>
          <input id="searchbox" type="text" onkeyup="search()">
 		 <h4>--------------------</h4>
-		 <h4 class="selector" style="color: #921515" onclick="reset()">Clear filter</h4>
+		 <h4 class="selector" style="color: #921515" onclick="reset()">Reset page</h4>
 		 <h4>--------------------</h4>
 		 <h4>Filter by...</h4>
          <h5 class="selector" id="selector-places" onclick="select('places','selector-places')">Places</h5>
@@ -28,52 +28,80 @@
          <h6 class="selector" id="selector-music" onclick="select('music','selector-music')">Music</h6>
        </div>
        <div class="main-area">
+       
+       <!-- Preview Box - do not edit -->
+
+      <div id="previewbox">
+        <div class="preview-header">
+          <div id="preview-title"></div>
+          <div class="preview-control"><span onclick="closePreview()">&times;</span></div>
+        </div>
+        <div id="preview-body">
+        </div>
+        <div id="preview-options"></div>
+      </div>
+
+       <!-- Make sure entries go below this line -->
+
          <div class="item practices ritual">
            <div class="item-header">Aarti</div>
-           <div class="item-body-summary">
-            <p>Aarti also spelled arti, arati, arathi, aarthi is a Hindu religious ritual of worship, a part of puja, in which light from wicks soaked in ghee or camphor is offered to one or more deities. Aartis also refer to the songs sung in praise of the deity, when lamps are being offered.</p>
-           <div class="item-body-full" id="aarti">
+           <div class="item-body-summary" id="aarti-summary">
+            <p>Aarti also spelled arti, arati, arathi, aarthi is a Hindu religious <span class="preview-link" onclick="preview('ritual')">ritual</span> of worship, a part of puja, in which light from wicks soaked in ghee or camphor is offered to one or more deities. Aartis also refer to the songs sung in praise of the deity, when lamps are being offered.</p>
+            </div>
+           <div class="item-body-full" id="aarti-body">
             <p>Aarti is derived from the Sanskrit word ārātrika (आरात्रिक), which means something that removes rātrī, darkness (or light waved in darkness before an icon).[1][2][3] Another word from which Aarti is thought to be derived is the Sanskrit word Aaraartikyam (Sanskrit: आरार्तिक्यं).[citation needed] A Marathi language reference says[4] it is also known as Mahaneeranjana (Sanskrit: महानीराञ्जना)[5]</p>
             
             <p>Aarti is said to have descended from the Vedic concept of fire rituals, or homa. In the traditional aarti ceremony, the flower represents the earth (solidity), the water and accompanying handkerchief correspond with the water element (liquidity), the ghee or oil lamp represents the fire component (heat), the peacock fan conveys the precious quality of air (movement), and the yak-tail fan represents the subtle form of ether (space). The incense represents a purified state of mind, and one’s "intelligence" is offered through the adherence to rules of timing and order of offerings. Thus, one’s entire existence and all facets of material creation are symbolically offered to the Lord via the aarti ceremony.[6] The word may also refer to the traditional Hindu devotional song that is sung during the ritual.</p>
             </div>
-             <button class="open-full" onclick="toggle('aarti')">expand / collapse</button>
-           </div>
+             <button class="open-full" onclick="toggle('aarti-body')">expand / collapse</button>
+           
          </div>
 		 
 		 <div class="item practices ritual worship">
         <div class="item-header">Eucharist</div>
-        <div class="item-body-summary">
+        <div class="item-body-summary" id="eucharist-summary">
             <p>The eucharist is when Christians eat bread and drink wine in remembrance of Jesus.</p>
-            <div class="item-body-full" id="eucharist">
+          </div>
+            <div class="item-body-full" id="eucharist-body">
                 <p>Typically held on Sundays, found throughout Christian world, although interpretations differ.</p>
             </div>
-            <button class="open-full" onclick="toggle('eucharist')">expand / collapse</button>
-        </div>
+            <button class="open-full" onclick="toggle('eucharist-body')">expand / collapse</button>
     </div>
 		 
 		<div class="item practices worship">
 			<div class="item-header">Prayer</div>
-			<div class="item-body-summary">
-				<p>Prayer is found in multiple religious settings, and generally involves communication with a divinity.</p>
-				<div class="item-body-full" id="prayer">
+			<div class="item-body-summary" id="prayer-summary">
+				<p>Prayer is found in multiple religious settings, and generally involves communication with a divinity.</p></div>
+				<div class="item-body-full" id="prayer-body">
 					<p>Prayers can be private or public, formal or informal.</p>
 				</div>
-				<button class="open-full" onclick="toggle('prayer')">expand / collapse</button>
+				<button class="open-full" onclick="toggle('prayer-body')">expand / collapse</button>
 			</div>
-		</div>
 
 		<div class="item places buildings">
 			<div class="item-header">Church</div>
-			<div class="item-body-summary">
+			<div class="item-body-summary" id="church-summary">
 				<p>Churches are Christian buildings for meeting in worship.</p>
-				<div class="item-body-full" id="church">
-					<p>Churches take many shapes and sizes. They have often been purpose built, but smaller groups may adapt existing buildings.</p>
-				</div>
-				<button class="open-full" onclick="toggle('church')">expand / collapse</button>
+      </div>
+			<div class="item-body-full" id="church-body">
+				<p>Churches take many shapes and sizes. They have often been purpose built, but smaller groups may adapt existing buildings.</p>
 			</div>
+			<button class="open-full" onclick="toggle('church-body')">expand / collapse</button>
 		</div>
-		
+
+    <div class="item practices ritual" id="ritual">
+      <div class="item-header">Ritual</div>
+      <div class="item-body-summary" id="ritual-summary">
+        <p>Rituals are actions performed in a prescribed manner to achieve some result.</p>
+      </div>
+      <div class="item-body-full" id="ritual-body">
+        <p>This is some more information about rituals that should not apear in the summary area.</p>
+      </div>
+        <button class="open-full" onclick="toggle('ritual-body')">expand / collapse</button>
+    </div>
+
+		  <!-- Insert new entries just above this line! -->
+
        </div>
      </div>
 

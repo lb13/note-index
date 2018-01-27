@@ -36,12 +36,17 @@
   
   function reset() {
 	var a = document.getElementsByClassName('item');
+	var b = document.getElementsByClassName('item-body-full');
 	var c = document.getElementsByClassName('selector');
 	
 	for (var z = 0; z < a.length; z++) {
 		a[z].style.display = 'block';
 	}
 	
+	for (var i = 0; i < b.length; i++) {
+		b[i].style.display = 'none';
+	}
+
 	for (var y = 0; y < c.length; y++) {
 		c[y].classList.remove('active');
 	}
@@ -64,4 +69,37 @@
         }
         }
       }
+  }
+
+  function preview(id) {
+ 	var x = document.getElementById(id+'-summary');
+
+  	document.getElementById('previewbox').style.display = 'block';
+  	document.getElementById('preview-body').innerHTML = x.innerHTML;
+  	document.getElementById('preview-title').innerHTML = id;
+  	document.getElementById('preview-options').innerHTML = '<a onclick="jump(\''+id+'\')">Full Article</a>'
+
+  }
+
+  function jump(id) {
+  	var a = document.getElementsByClassName('item');
+  	var b = document.getElementById(id);
+  	var c = document.getElementById(id+'-body');
+  	var d = document.getElementsByClassName('selector');
+	
+	for (var z = 0; z < a.length; z++) {
+		a[z].style.display = 'none';
+	}
+
+	for (var y = 0; y < d.length; y++) {
+		d[y].classList.remove('active');
+	}	
+
+ 	document.getElementById('previewbox').style.display = 'none';
+	b.style.display = 'block';
+	c.style.display = 'block';
+  }
+
+  function closePreview() {
+ 	document.getElementById('previewbox').style.display = 'none';
   }

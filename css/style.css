@@ -43,8 +43,6 @@
 
 .item-header {
   width: inherit;
-  border: 1px solid #000;
-  border-radius: 10px 10px 0px 0px;
   margin: 0px;
   padding: 5px;
   font-size: 20px;
@@ -52,12 +50,10 @@
   color: #FFF;
 }
 
-.item-body-summary {
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+.item {
+  border: 1px solid #000;
   margin: 0px;
-  padding: 5px;
+  padding: 0px;
   font-size: 12px;
 }
 
@@ -128,7 +124,7 @@ header h1 {
 footer {
   height: 150px;
   padding: 0px;
-  margin: 0px;
+  margin: 20px 0px 0px 0px;
   background-color: grey;
 }
 
@@ -141,4 +137,43 @@ footer p {
 
 .clearfix {
   clear: both;
+}
+
+.preview-link {
+  color: blue;
+  cursor: help;
+}
+
+#previewbox {
+  display: none;
+  position: fixed;
+  top: 35%;
+  right: 20%;
+  background-color: lightblue;
+  border-left: 3px solid blue;
+  font-size: 20em;
+  padding: 10px;
+}
+
+#preview-title {
+  display: inline;
+  font-size: 3em;
+}
+
+.preview-control {
+  display: inline;
+  position: absolute;
+  margin-right: 15px;
+  right: 0px;
+  cursor: pointer;
+}
+
+#preview-options {
+  padding: 5px;
+}
+
+#preview-options a {
+  text-decoration: none;
+  color: blue;
+  cursor: pointer;
 }
