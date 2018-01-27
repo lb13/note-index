@@ -124,3 +124,21 @@ header h1 {
 	cursor: pointer;
 	background-color: lightblue;
 }
+
+footer {
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  background-color: grey;
+}
+
+footer p {
+  padding: 60px;
+  margin: auto;
+  color: white;
+  font-size: 15em;
+}
+
+.clearfix {
+  clear: both;
+}

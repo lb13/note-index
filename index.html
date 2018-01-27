@@ -2,8 +2,9 @@
 <html>
  <head>
    <meta charset="UTF-8">
-   <title>RS Notes</title>
+   <title>Note Index</title>
  <link rel="stylesheet" href="./css/style.css" type="text/css">
+ <script type="text/javascript" src="./js/main.js"></script>
  </head>
  <body>
    <div class="page-wrapper">
@@ -11,9 +12,9 @@
      <div class="content-wrapper">
        <div class="sidebar">
          <h4>Search for...</h4>
-         <input type="text">
+         <input id="searchbox" type="text" onkeyup="search()">
 		 <h4>--------------------</h4>
-		 <h4 class="selector" onclick="reset()">Clear filter</h4>
+		 <h4 class="selector" style="color: #921515" onclick="reset()">Clear filter</h4>
 		 <h4>--------------------</h4>
 		 <h4>Filter by...</h4>
          <h5 class="selector" id="selector-places" onclick="select('places','selector-places')">Places</h5>
@@ -75,57 +76,17 @@
 		
        </div>
      </div>
+
+<div class="clearfix"></div>
+
+<footer>
+<p>&copy; Luke Burns 2018<br>Find out more here: <a href="https://github.com/lb13/note-index">Github repo</a></p>
+</footer>
+
    </div>
+
+
+
  </body>
 
-<script>
-  function toggle(id) {
-    var e = document.getElementById(id);
-    if (e.style.display == 'block') {
-      e.style.display = 'none';
-    }
-      else {
-        e.style.display = 'block';
-    }
-  }  
-
-  function select(cl,id) {
-    var e = document.getElementsByClassName(cl);
-	var a = document.getElementsByClassName('item');
-	var c = document.getElementsByClassName('selector');
-	
-	// First, need to set all elements with class 'item' to hidden so that non-relevant results are ommitted
-	for (var z = 0; z < a.length; z++) {
-		a[z].style.display = 'none';
-	}
-	
-	// Loops through the instances of the class that is named cl, which will be the topic filtered for
-	// Sets those elements with a matching class to display
-	for (var i = 0; i < e.length; i++) {
-		e[i].style.display = 'block';
-	}
-	
-	// Sets all selectors to deactivated before moving on to activate the appropriate selector usng ID
-	for (var y = 0; y < c.length; y++) {
-		c[y].classList.remove('active');
-	}
-	
-	// Sets the topic to active, highlights it
-	document.getElementById(id).classList.add('active');
-  }
-
-  
-  function reset() {
-	var a = document.getElementsByClassName('item');
-	var c = document.getElementsByClassName('selector');
-	
-	for (var z = 0; z < a.length; z++) {
-		a[z].style.display = 'block';
-	}
-	
-	for (var y = 0; y < c.length; y++) {
-		c[y].classList.remove('active');
-	}
-  }
-</script>
 </html>
