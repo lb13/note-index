@@ -103,3 +103,7 @@
   function closePreview() {
  	document.getElementById('previewbox').style.display = 'none';
   }
+
+  function generateHTML() {
+  	alert('It worked!!');
+  }
