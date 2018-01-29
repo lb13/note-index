@@ -5,7 +5,7 @@ A repository of notes organised by theme. Searchable, linked, comprehensive.
 Because static files are handy if you're hosting on Github Pages, or even just running a HTML document from your local computer. It's not possible to use server-side programming in that scenario, so most CMS and wiki options are out the window. There are static HTML generators like Jekyll, but that doesn't really give you a simple out of the box solution unless you want to install Ruby and get your head around yet another piece of software. Not that Ruby isn't great, but I want to go one step simpler.
 
 ## How?
-Well basically you should just be able to follow some really basic HTML principles and get good results. That's the idea, anyway.
+By following some basic HTML principles you should get good results :)
 
 Add new item:
 
@@ -29,7 +29,7 @@ Subject: Music
   Area: Metal
   Area: Pop
 
-Functionally, subjects and areas are identical - the difference is purely cosmetic and is based on using the <h5> tag for subjects and the <h6> tag for areas.
+Functionally, subjects and areas are identical - the difference is purely cosmetic and is based on using the `<h5>` tag for subjects and the `<h6>` tag for areas.
 
 Edit the sidebar:
 
