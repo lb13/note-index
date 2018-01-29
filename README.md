@@ -22,12 +22,29 @@ Add new item:
 </div>
 ```
 
-Basic principles as follow:
-- Main container will include search options in navbar on left of article
-- Main article will contain all content in separate divs
-- Each entry will have classes that act as tags for the purpose of filtering the displayed content.
-- By default only a summary of each entry will be shown, but you can click to expand and read the full entry
-- Any terms of interest in the entry will be linked to the main entry on that subject - clicking will display a custom div that is fixed in position (so will always open in the same place on screen) - this will contain a brief summary / description with the option to click and go to the full entry
-- Major connected items will have dedicated buttons to highlight their importance
+The sidebar provides grouping under SUBJECTS - which are high level, and AREAS - which are lower level. You might have many areas within a subject - for instance:
 
-Plan to host on GitHub pages, so will only use static files (no PHP!) this means that search and filtering functions will be Javascript-based.
+Subject: Music
+  Area: Folk
+  Area: Metal
+  Area: Pop
+
+Functionally, subjects and areas are identical - the difference is purely cosmetic and is based on using the <h5> tag for subjects and the <h6> tag for areas.
+
+Edit the sidebar:
+
+```html
+<div class="sidebar">
+  <h4>Search for...</h4>
+  <input id="searchbox" type="text" onkeyup="search()">
+  <h4>--------------------</h4>
+  <h4 class="selector" style="color: #921515" onclick="reset()">Reset page</h4>
+  <h4>--------------------</h4>
+  <h4>Filter by...</h4>
+  <h5 class="selector" id="selector-SUBJECT1" onclick="select('SUBJECT1','selector-SUBJECT1')">SUBJECT1</h5>
+  <h6 class="selector" id="selector-AREA1" onclick="select('AREA1','selector-AREA1')">AREA1</h6>
+  <h5 class="selector" id="selector-SUBJECT2" onclick="select('SUBJECT2','selector-SUBJECT2')">SUBJECT2</h5>
+  <h6 class="selector" id="selector-AREA2" onclick="select('AREA2','selector-AREA2')">AREA2</h6>
+</div>
+```
+
